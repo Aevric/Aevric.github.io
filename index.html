@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello，I'm Aevric</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #000;
+            font-family: "Courier New", monospace;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .boot-animation {
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out 0.5s forwards;
+        }
+
+        .target-text {
+            color: #ffffff;
+            font-size: 24px;
+        }
+
+        .cursor {
+            display: inline-block;
+            width: 8px;
+            height: 24px;
+            background-color: #00ff00;
+            margin-left: 4px;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="boot-animation">
+        <div class="target-text">
+            <span class="cursor"></span>
+        </div>
+    </div>
+
+    <script>
+        const targetText = document.querySelector('.target-text');
+        const text = "Hello，I'm Aevric.";
+        let index = 0;
+        
+        setTimeout(() => {
+            const typeWriter = () => {
+                if (index < text.length) {
+                    targetText.innerHTML = text.substring(0, index + 1) + '<span class="cursor"></span>';
+                    index++;
+                    setTimeout(typeWriter, 80);
+                }
+            };
+            typeWriter();
+        }, 1000);
+    </script>
+</body>
+</html>
