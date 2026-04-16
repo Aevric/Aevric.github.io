@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>文档中心</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/highlight.js/lib/core.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js/styles/github.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+  <header class="header">
+    <div class="header-content">
+      <div class="logo"><i class="fa fa-book"></i> 文档中心</div>
+      <button id="backBtn" class="back-btn"><i class="fa fa-arrow-left"></i> 返回列表</button>
+    </div>
+  </header>
+
+  <div id="breadcrumb" class="breadcrumb"></div>
+
+  <main class="main">
+    <div id="fileView">
+      <div id="grid" class="doc-grid">
+        <div id="loading" class="loading">加载中...</div>
+      </div>
+    </div>
+
+    <div id="docView" class="doc-view">
+      <div class="toc" id="toc"></div>
+      <div class="markdown-body" id="content"></div>
+    </div>
+  </main>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
