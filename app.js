@@ -1,5 +1,5 @@
 const CONFIG = {
-  rootDir: "./docs/",
+  rootDir: "/docs/",
   maxFiles: 200
 };
 
