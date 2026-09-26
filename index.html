@@ -1,43 +1,334 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>文档中心</title>
-
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/highlight.js/lib/core.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js/styles/github.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
-
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Aevric｜C/C++ Linux</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-
-<div class="app">
-  <header class="header">
-    <div class="header-content">
-      <div class="logo"><i class="fa fa-book"></i> 文档中心</div>
-      <button id="backBtn" class="back-btn"><i class="fa fa-arrow-left"></i> 返回列表</button>
+<div class="page-wrap">
+    <!-- Hero头部 -->
+    <div class="hero">
+        <div class="hero-top">
+            <div class="hero-info">
+                <h1>Aevric<span class="name-tag">NAME</span></h1>
+                <div class="subtitle">
+                    <span class="lang-zh">10+ 年开发经验 <strong>C/C++开发工程师</strong></span>
+                    <span class="lang-en">10+ Years Experience <strong>C/C++ Developer</strong></span>
+                </div>
+                <div class="hero-meta">
+                    <span class="lang-zh">期望薪资：<strong>25-35K</strong>  | 期望城市：<strong>中国 · 北京</strong></span>
+                    <span class="lang-en">Expected Salary: <strong>25-35K</strong>  | Location: <strong>Beijing, China</strong></span>
+                </div>
+            </div>
+            <div class="hero-side">
+                <button class="lang-toggle" id="langToggleBtn">EN</button>
+                <div class="contact-item">
+                    <a href="mailto:aevric@hotmail.com">aevric@hotmail.com</a>
+                    <button class="copy-btn" data-copy="aevric@hotmail.com">
+                        <span class="lang-zh">复制</span>
+                        <span class="lang-en">Copy</span>
+                    </button>
+                </div>
+                <div class="contact-item">
+                    <a href="https://github.com/Aevric" target="_blank" rel="noopener noreferrer">github.com/Aevric</a>
+                    <button class="copy-btn" data-copy="https://github.com/Aevric">
+                        <span class="lang-zh">复制</span>
+                        <span class="lang-en">Copy</span>
+                    </button>
+                </div>
+                <div class="contact-item">Beijing, China</div>
+            </div>
+        </div>
     </div>
-  </header>
 
-  <div id="breadcrumb" class="breadcrumb"></div>
-
-  <main class="main">
-    <div id="fileView">
-      <div id="grid" class="doc-grid">
-        <div id="loading" class="loading">加载中...</div>
-      </div>
+    <!-- 个人简介 -->
+    <div class="summary">
+        <p class="lang-zh">
+            1. 深耕 C/C++ 开发领域 11 年，横跨通信基站、AI 算子、语音识别、互联网广告四大领域<br />
+            2. 具备丰富的高性能服务、嵌入式系统与算子工程化经验<br />
+            3. 精通 Linux 环境开发、TCP/IP 网络协议栈、OpenPPL 矩阵算子工程化与软硬件协同调试<br />
+            4. 主导过多个从 0 到 1 的技术项目落地，落地过纳秒级 PTP 时钟同步、算子性能专项优化等核心指标<br />
+            5. 擅长底层性能调优、多协议数据解析与跨 BSP/FPGA 团队技术协作<br />
+            6. 具备完整的项目全周期设计、开发与交付能力
+        </p>
+        <p class="lang-en">
+            1. 11 years in C/C++ development, covering telecom base stations, AI operators, speech recognition & internet advertising<br />
+            2. Extensive experience in high‑performance services, embedded systems and operator engineering<br />
+            3. Proficient in Linux development, TCP/IP stack, OpenPPL matrix operator engineering & hardware‑software co‑debugging<br />
+            4. Led multiple 0‑to‑1 technical projects, delivered nanosecond‑level PTP clock sync & operator performance optimization<br />
+            5. Skilled in low‑level performance tuning, multi‑protocol data parsing & cross‑team collaboration with BSP/FPGA<br />
+            6. Full‑cycle capabilities in project design, development and delivery
+        </p>
     </div>
 
-    <div id="docView" class="doc-view">
-      <div class="toc" id="toc"></div>
-      <div class="markdown-body" id="content"></div>
-    </div>
-  </main>
+    <!-- 专业技能 -->
+    <section class="section">
+        <h2 class="section-title">
+            <span class="lang-zh">专业技能</span>
+            <span class="lang-en">Technical Skills</span>
+        </h2>
+        
+        <div class="skill-group">
+            <h4 class="skill-group-title">Core Development</h4>
+            <div class="tags-wrap">
+                <div class="tag-item">
+                    <span class="lang-zh">Linux C/C++高性能开发</span>
+                    <span class="lang-en">Linux C/C++ High‑Performance Dev</span>
+                </div>
+                <div class="tag-item">
+                    <span class="lang-zh">汇编 & AI算子 OpenPPL工程化</span>
+                    <span class="lang-en">Assembly & AI Operator OpenPPL Eng</span>
+                </div>
+                <div class="tag-item">
+                    <span class="lang-zh">矩阵运算与算子性能优化</span>
+                    <span class="lang-en">Matrix Ops & Operator Optimization</span>
+                </div>
+                <div class="tag-item">
+                    <span class="lang-zh">WFST算法与语音检测（VAD/SAD）</span>
+                    <span class="lang-en">WFST Algorithm & VAD/SAD Detection</span>
+                </div>
+                <div class="tag-item">
+                    <span class="lang-zh">ASR语音识别引擎开发</span>
+                    <span class="lang-en">ASR Speech Recognition Engine</span>
+                </div>
+                <div class="tag-item">
+                    <span class="lang-zh">Python / Shell脚本</span>
+                    <span class="lang-en">Python / Shell Scripting</span>
+                </div>
+                <div class="tag-item">
+                    <span class="lang-zh">QT界面开发</span>
+                    <span class="lang-en">QT Interface Development</span>
+                </div>
+                <div class="tag-item">
+                    <span class="lang-zh">软件回归测试与性能调优</span>
+                    <span class="lang-en">Regression Testing & Performance Tuning</span>
+                </div>
+                <div class="tag-item">
+                    <span class="lang-zh">项目全周期设计落地</span>
+                    <span class="lang-en">Full‑Cycle Project Delivery</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="skill-group">
+            <h4 class="skill-group-title">Network & Protocol</h4>
+            <div class="tags-wrap">
+                <div class="tag-item">
+                    <span class="lang-zh">TCP/UDP、HTTP网络协议</span>
+                    <span class="lang-en">TCP/UDP & HTTP Network Protocols</span>
+                </div>
+                <div class="tag-item">
+                    <span class="lang-zh">Socket网络编程</span>
+                    <span class="lang-en">Socket Network Programming</span>
+                </div>
+                <div class="tag-item">
+                    <span class="lang-zh">Nginx反向代理与请求解析</span>
+                    <span class="lang-en">Nginx Reverse Proxy & Parsing</span>
+                </div>
+                <div class="tag-item">
+                    <span class="lang-zh">Protobuf / JSON / XML数据解析</span>
+                    <span class="lang-en">Protobuf / JSON / XML Data Parsing</span>
+                </div>
+                <div class="tag-item">
+                    <span class="lang-zh">数据序列化加密传输</span>
+                    <span class="lang-en">Data Serialization & Encryption</span>
+                </div>
+                <div class="tag-item">
+                    <span class="lang-zh">PTP时钟同步（纳秒级）</span>
+                    <span class="lang-en">PTP Clock Sync (Nanosecond Level)</span>
+                </div>
+                <div class="tag-item">
+                    <span class="lang-zh">ORAN协议栈（RU/DU、C/U/S/M‑Plan）</span>
+                    <span class="lang-en">ORAN Protocol Stack (RU/DU, C/U/S/M‑Plan)</span>
+                </div>
+                <div class="tag-item">
+                    <span class="lang-zh">广告竞价引擎数据流处理</span>
+                    <span class="lang-en">Ad Bidding Engine Data Flow</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="skill-group">
+            <h4 class="skill-group-title">Embedded & Kernel</h4>
+            <div class="tags-wrap">
+                <div class="tag-item">
+                    <span class="lang-zh">BSP、Driver、Kernel协同开发</span>
+                    <span class="lang-en">BSP, Driver & Kernel Co‑Development</span>
+                </div>
+                <div class="tag-item">
+                    <span class="lang-zh">FPGA软硬件联合调试</span>
+                    <span class="lang-en">FPGA HW/SW Co‑Debugging</span>
+                </div>
+                <div class="tag-item">
+                    <span class="lang-zh">单片机烧录与硬件驱动调试</span>
+                    <span class="lang-en">MCU Flashing & Driver Debug</span>
+                </div>
+                <div class="tag-item">
+                    <span class="lang-zh">微波射频调制解调驱动</span>
+                    <span class="lang-en">Microwave RF Modem Driver</span>
+                </div>
+                <div class="tag-item">
+                    <span class="lang-zh">MySQL、Redis数据库</span>
+                    <span class="lang-en">MySQL & Redis Databases</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 项目经历时间线 -->
+    <section class="section">
+        <h2 class="section-title">
+            <span class="lang-zh">项目经历</span>
+            <span class="lang-en">Project Experience</span>
+        </h2>
+        <div class="timeline">
+
+            <div class="timeline-card">
+                <div class="card-head">
+                    <div class="card-title">
+                        <h3>
+                            <span class="lang-zh">MPU基础算子应用开发</span>
+                            <span class="lang-en">MPU Basic Operator Development</span>
+                        </h3>
+                        <div class="role">
+                            <span class="lang-zh">算子开发工程师</span>
+                            <span class="lang-en">Operator Developer</span>
+                        </div>
+                    </div>
+                    <div class="card-date">2025.09 — 2026.05</div>
+                </div>
+                <div class="card-body">
+                    <ul class="lang-zh">
+                        <li>开发MPU基础算子测试Demo，完成算子功能验证</li>
+                        <li>将汇编算子逻辑转换为可维护、可移植的C++工程代码</li>
+                        <li>基于OpenPPL，把框架Python实现、数学公式迁移重构为高性能C++代码，完成工程适配与性能优化</li>
+                        <li>分析汇编指令，反向推导算子运算逻辑，完成矩阵算子算法落地</li>
+                    </ul>
+                    <ul class="lang-en">
+                        <li>Developed MPU basic operator test demos for functional verification</li>
+                        <li>Converted assembly operator logic into maintainable, portable C++ code</li>
+                        <li>Migrated OpenPPL Python implementations & math formulas to high‑performance C++ with optimization</li>
+                        <li>Analyzed assembly instructions, reverse‑engineered logic and implemented matrix algorithms</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-card">
+                <div class="card-head">
+                    <div class="card-title">
+                        <h3>
+                            <span class="lang-zh">ORAN产品开发维护</span>
+                            <span class="lang-en">ORAN Product Development & Maintenance</span>
+                        </h3>
+                        <div class="role">
+                            <span class="lang-zh">嵌入式软件开发工程师</span>
+                            <span class="lang-en">Embedded Software Engineer</span>
+                        </div>
+                    </div>
+                    <div class="card-date">2022.06 — 2026.07</div>
+                </div>
+                <div class="card-body">
+                    <ul class="lang-zh">
+                        <li>负责无线电软件迭代，驱动适配与性能调优，保障系统稳定运行</li>
+                        <li>实现PTP时钟校准方案，达成设备纳秒级时钟同步指标</li>
+                        <li>Socket数据流处理，解析Protobuf、JSON、XML等多协议业务数据</li>
+                        <li>与BSP、FPGA团队协同软硬件联合调试，定位问题推进项目交付</li>
+                        <li>编写Shell/Python自动化脚本，提升研发测试效率；完成微波射频调制解调驱动开发</li>
+                        <li>遵循ORAN联盟规范开发RU/DU设备，完成C‑Plan/U‑plan/S‑plan/M‑plan业务，实现协议交互与数据分发</li>
+                    </ul>
+                    <ul class="lang-en">
+                        <li>Owned radio software iteration, driver adaptation and performance tuning for system stability</li>
+                        <li>Implemented PTP clock calibration, achieving nanosecond‑level synchronization</li>
+                        <li>Processed Socket streams, parsed Protobuf/JSON/XML multi‑protocol data</li>
+                        <li>Collaborated with BSP/FPGA teams on co‑debugging and project delivery</li>
+                        <li>Built Shell/Python automation scripts; developed microwave RF modem drivers</li>
+                        <li>Developed RU/DU per ORAN specs, implemented C/U/S/M‑Plan services and data distribution</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-card">
+                <div class="card-head">
+                    <div class="card-title">
+                        <h3>
+                            <span class="lang-zh">自动语音识别(ASR)引擎功能开发</span>
+                            <span class="lang-en">ASR Engine Function Development</span>
+                        </h3>
+                        <div class="role">
+                            <span class="lang-zh">C++开发工程师</span>
+                            <span class="lang-en">C++ Developer</span>
+                        </div>
+                    </div>
+                    <div class="card-date">2019.01 — 2022.06</div>
+                </div>
+                <div class="card-body">
+                    <ul class="lang-zh">
+                        <li>负责语音识别产品迭代，QT界面开发，C/C++与Python性能调优</li>
+                        <li>开发语音识别接口，完成指令匹配、引擎本地化部署与业务加密处理</li>
+                        <li>加载语音模型，完成性能测试、参数调优与回归测试</li>
+                        <li>搭建Socket服务端，基于WFST算法，实现VAD/SAD语音检测逻辑</li>
+                        <li>处理网络音频流数据，完成语音转文字，对外提供识别服务</li>
+                    </ul>
+                    <ul class="lang-en">
+                        <li>Led ASR product iteration, QT interface dev and C/C++ & Python optimization</li>
+                        <li>Built speech recognition interfaces for command matching, local deployment and encryption</li>
+                        <li>Loaded speech models, conducted performance testing, tuning and regression tests</li>
+                        <li>Built Socket server, implemented VAD/SAD detection based on WFST algorithm</li>
+                        <li>Processed network audio streams, delivered speech‑to‑text recognition services</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-card">
+                <div class="card-head">
+                    <div class="card-title">
+                        <h3>
+                            <span class="lang-zh">SSP/DSP广告平台（引擎开发）</span>
+                            <span class="lang-en">SSP/DSP Ad Platform (Engine Dev)</span>
+                        </h3>
+                        <div class="role">
+                            <span class="lang-zh">C++开发工程师</span>
+                            <span class="lang-en">C++ Developer</span>
+                        </div>
+                    </div>
+                    <div class="card-date">2016.09 — 2019.01</div>
+                </div>
+                <div class="card-body">
+                    <ul class="lang-zh">
+                        <li>广告平台后端引擎整体研发，参与需求分析、模块设计编码与测试</li>
+                        <li>对接第三方广告接口，解决线上技术难点，保障系统稳定性</li>
+                        <li>基于Nginx处理HTTP竞价请求，数据库关联查询，实时响应业务请求</li>
+                        <li>Protobuf序列化加密传输，处理广告竞价全流程；统计曝光、点击、下载业务数据</li>
+                        <li>完成用户信息分析与业务数据处理，评估项目技术风险并持续优化</li>
+                    </ul>
+                    <ul class="lang-en">
+                        <li>Full‑stack R&D of ad platform backend, from requirement analysis to testing</li>
+                        <li>Integrated third‑party ad APIs, resolved production issues and ensured stability</li>
+                        <li>Processed HTTP bidding requests via Nginx and database queries in real time</li>
+                        <li>Protobuf encrypted transmission for full ad bidding flow; tracked impressions & clicks</li>
+                        <li>Analyzed user data, assessed technical risks and drove continuous optimization</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 结尾邀请 -->
+    <section class="contact-cta">
+        <h3>
+            <span class="lang-zh">看到这里了，不如聊聊？</span>
+            <span class="lang-en">Made it this far? Let's talk.</span>
+        </h3>
+        <p>
+            <span class="lang-zh">如果你也对底层技术、算子优化、嵌入式开发感兴趣，<br>别客气，随时发邮件过来，我一般当天就会回复。</span>
+            <span class="lang-en">If you're into low‑level tech, operator optimization or embedded development,<br>feel free to drop me an email. I usually reply the same day.</span>
+        </p>
+        <a href="mailto:aevric@hotmail.com" class="cta-email">aevric@hotmail.com →</a>
+    </section>
 </div>
 
-<script src="app.js"></script>
+<script src="./main.js"></script>
 </body>
 </html>
